@@ -53,30 +53,6 @@ steps:
     extensionPricing: free
   condition: and(succeeded(), ne(variables['Build.SourceBranchName'], 'main'))
 
-- task: PublishAzureDevOpsExtension@4
-  displayName: 'TFX: Publish Extension Dev'
-  inputs:
-    connectedServiceName: Jwala
-    rootFolder: .
-    patternManifest: 'azure-devops-extension.json'
-    publisherId: JakubRumpca
-    extensionId: azure-pipelines-html-report
-    extensionTag: dev
-    extensionName: 'Html Viewer Dev'
-    extensionVersion: '1.0.$(Build.BuildId)'
-    extensionVisibility: private
-    extensionPricing: free
-  condition: and(succeeded(), ne(variables['Build.SourceBranchName'], 'main'))
-
-- task: ShareAzureDevOpsExtension@4
-  displayName: 'TFX: Share Extension'
-  inputs:
-    connectedServiceName: JakubMarketPlace
-    method: vsix
-    vsixFile: '**.vsix'
-    accounts: 'maciejmaciejewski-dev'
-  condition: and(succeeded(), ne(variables['Build.SourceBranchName'], 'main'))
-
 - task: CopyFiles@2
   displayName: 'Copy Files'
   inputs:
