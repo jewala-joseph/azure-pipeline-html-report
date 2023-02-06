@@ -56,7 +56,7 @@ steps:
 - task: PublishAzureDevOpsExtension@4
   displayName: 'TFX: Publish Extension Dev'
   inputs:
-    connectedServiceName: JakubMarketPlace
+    connectedServiceName: Jwala
     rootFolder: .
     patternManifest: 'azure-devops-extension.json'
     publisherId: JakubRumpca
