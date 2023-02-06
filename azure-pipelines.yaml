@@ -15,7 +15,7 @@ steps:
 - task: Npm@1
   displayName: 'npm install extension'
   inputs:
-    workingDir: .
+    workingDir: PublishHtmlReport
     verbose: false
 
 - task: Npm@1
