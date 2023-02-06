@@ -22,7 +22,7 @@ steps:
   displayName: 'build extension'
   inputs:
     command: custom
-    workingDir: .
+    workingDir: PublishHtmlReport
     verbose: false
     customCommand: 'run build:cidev'
 
